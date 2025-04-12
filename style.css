@@ -1,0 +1,196 @@
+/* Mengatur ulang margin dan padding, serta box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+  font-family: "Inter", sans-serif; /* Menggunakan font Inter */
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Pusat horizontal */
+  align-items: center; /* Pusat vertikal */
+  height: 100vh; /* Tinggi penuh layar */
+  background: linear-gradient(135deg, #1c1b2f, #3e2a56); /* Gradien latar belakang */
+  overflow: hidden; /* Menyembunyikan overflow */
+}
+
+/* Wrapper untuk kartu */
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 3 / 3.7;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  background-color: #2b2d42;
+}
+
+/* Gaya umum untuk kartu */
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* Kartu pertama (intro) */
+.card-1 {
+  z-index: 2;
+  color: white;
+  background-color: #3b3054;
+}
+
+/* Kartu kedua (kontak) */
+.card-2 {
+  z-index: 1;
+  transform: translateY(100%);
+  opacity: 0;
+  background-color: #2f2c45;
+  color: white;
+}
+
+/* Gaya gambar profil */
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ukuran gambar profil pada kartu pertama */
+.card-1 .logo img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Efek hover pada gambar */
+.logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol umum */
+button {
+  margin-top: 15px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background: #7f5af0;
+  box-shadow: 0 0 0px 2px rgba(127, 90, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Efek hover tombol */
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(127, 90, 240, 0.4);
+}
+
+/* Daftar kontak ditampilkan dalam grid */
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Item dalam daftar kontak */
+.contact-list li {
+  list-style: none;
+}
+
+/* Link dalam kontak */
+.contact-list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #3b3b5c;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover pada link */
+.contact-list a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Ikon di dalam link */
+.contact-list i {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Garis animasi bawah link */
+.contact-list a::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #7f5af0;
+  transition: all 0.3s ease;
+}
+
+.contact-list a:hover::after {
+  left: 25%;
+  width: 50%;
+}
+
+/* Gaya tombol kembali */
+.btn-back {
+  margin-top: 25px;
+  background: #5f4bb6;
+  box-shadow: 0 0 0px 2px rgba(95, 75, 182, 0.5);
+}
+
+.btn-back:hover {
+  background: #513fa0;
+  box-shadow: 0 8px 20px rgba(95, 75, 182, 0.4);
+}
+
+/* Warna khusus untuk ikon berdasarkan brand */
+.contact-list a.email i {
+  color: #d44638;
+}
+.contact-list a.linkedin i {
+  color: #0077b5;
+}
+.contact-list a.whatsapp i {
+  color: #25d366;
+}
+.contact-list a.instagram i {
+  color: #e1306c;
+}
+.contact-list a.github i {
+  color: #333;
+}
+.contact-list a.portfolio i {
+  color: #fca311;
+}

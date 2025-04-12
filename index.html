@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- Mendefinisikan jenis dokumen HTML -->
+<html lang="en"> <!-- Tag HTML utama dengan bahasa Inggris -->
+  <head>
+    <meta charset="UTF-8" /> <!-- Menentukan encoding karakter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Untuk responsif di perangkat mobile -->
+    <title>Contact Card</title> <!-- Judul tab halaman -->
+    
+    <!-- Mengimpor font dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <!-- Mengimpor ikon dari Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Wrapper utama untuk kartu -->
+    <div class="card-wrapper">
+      <!-- Kartu pertama (intro) -->
+      <div class="card card-1" id="card1">
+        <!-- Bagian logo atau foto profil -->
+        <div class="logo">
+          <img src="img/anya1.webp" alt="Profile Picture" /> <!-- Gambar profil -->
+        </div>
+        <h3>Hello</h3> <!-- Salam pembuka -->
+        <h2>I'm Ahmad</h2> <!-- Nama pengguna -->
+        <p>A fifth-semester student at a university in Karawang</p> <!-- Deskripsi singkat -->
+        <button id="nextBtn">Let's Connect</button> <!-- Tombol untuk berpindah ke kontak -->
+      </div>
+
+      <!-- Kartu kedua (kontak) -->
+      <div class="card card-2" id="card2">
+        <div class="logo">
+          <img src="img/anya1.webp" alt="Profile Picture" /> <!-- Gambar profil yang sama -->
+        </div>
+        <h3>Contact Me</h3> <!-- Judul bagian kontak -->
+        
+        <!-- Daftar kontak dalam bentuk grid -->
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:16ahmadd@gmail.com" class="email">
+              <i class="fas fa-envelope"></i>Email
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com" class="linkedin">
+              <i class="fab fa-linkedin"></i>LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/6285714653494" class="whatsapp">
+              <i class="fab fa-whatsapp"></i>WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ahmdd1.3" class="instagram">
+              <i class="fab fa-instagram"></i>Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com" class="github">
+              <i class="fab fa-github"></i>GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://yourportfolio.com" class="portfolio">
+              <i class="fas fa-briefcase"></i>Portfolio
+            </a>
+          </li>
+        </ul>
+        <button class="btn-back" id="backBtn">Back</button> <!-- Tombol kembali ke kartu awal -->
+      </div>
+    </div>
+
+    <!-- Menghubungkan file JavaScript eksternal -->
+    <script src="script.js"></script>
+  </body>
+</html>
